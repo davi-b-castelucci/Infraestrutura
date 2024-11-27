@@ -5,8 +5,9 @@ Algoritmo "Máquinas em Relação a Infraestrutura"
 // Autor(a)    : Nome do(a) aluno(a)
 // Data atual  : 27/11/2024
 
+
+// Definição do tipo "maquina" como um registro
 Tipo
-//
  maquina = registro
       nome: caractere
       dias: inteiro
@@ -29,7 +30,7 @@ Inicio
 
 total <- 5
 
-
+ // Loop para entrada de dados das máquinas
    para i de 1 ate total faca
       escreval("Digite o nome da máquina ", i, ": ")
       leia(maquinas[i].nome)
@@ -42,7 +43,7 @@ total <- 5
       maquinas[i].prioridade <- (maquinas[i].dias * 0.4) + (maquinas[i].horas * 0.3) +(maquinas[i].gravidade * 0.3)
    fimpara
 
-
+// Loop para ordenar as máquinas por prioridade (ordem decrescente)
    para i de 1 ate total - 1 faca
       para j de 1 ate total - i faca
          se maquinas[j].prioridade < maquinas[j + 1].prioridade entao
@@ -53,13 +54,13 @@ total <- 5
       fimpara
    fimpara
 
-
+// Exibe a lista de máquinas ordenadas por prioridade
    escreval("Lista de máquinas por ordem de prioridade:")
    para i de 1 ate total faca
       escreval(maquinas[i].nome, " - Prioridade: ", maquinas[i].prioridade:0:1)
    fimpara
 
-
+  // Busca a prioridade de uma máquina específica pelo nome
    escreval("Digite o nome da máquina para buscar a prioridade: ")
    leia(busca)
    encontrou <- falso
@@ -71,6 +72,8 @@ total <- 5
       fimse
    fimpara
 
+
+ // Se a máquina não foi encontrada, exibe uma mensagem
    se nao encontrou entao
       escreval("Máquina não encontrada.")
    fimse
