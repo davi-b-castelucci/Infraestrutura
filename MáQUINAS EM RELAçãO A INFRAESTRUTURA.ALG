@@ -1,7 +1,7 @@
-Algoritmo "Máquinas em Relação a Infraestrutura"
+Algoritmo "MÃ¡quinas em RelaÃ§Ã£o a Infraestrutura"
 // 
 //  
-// Descrição   : Aqui você descreve o que o programa faz! (função)
+// DescriÃ§Ã£o   : Aqui vocÃª descreve o que o programa faz! (funÃ§Ã£o)
 // Autor(a)    : Nome do(a) aluno(a)
 // Data atual  : 27/11/2024
 
@@ -17,7 +17,7 @@ Tipo
 
 
 Var
-// Seção de Declarações das variáveis 
+// SeÃ§Ã£o de DeclaraÃ§Ãµes das variÃ¡veis 
  maquinas: vetor[1..5] de maquina
    i, j, total: inteiro
    temp: maquina
@@ -25,15 +25,15 @@ Var
    encontrou: logico
 
 Inicio
-// Seção de Comandos, procedimento, funções, operadores, etc... 
+// SeÃ§Ã£o de Comandos, procedimento, funÃ§Ãµes, operadores, etc... 
 
 total <- 5
 
 
    para i de 1 ate total faca
-      escreval("Digite o nome da máquina ", i, ": ")
+      escreval("Digite o nome da mÃ¡quina ", i, ": ")
       leia(maquinas[i].nome)
-      escreval("Digite os dias desde a última manutenção: ")
+      escreval("Digite os dias desde a Ãºltima manutenÃ§Ã£o: ")
       leia(maquinas[i].dias)
       escreval("Digite as horas trabalhadas: ")
       leia(maquinas[i].horas)
@@ -54,13 +54,13 @@ total <- 5
    fimpara
 
 
-   escreval("Lista de máquinas por ordem de prioridade:")
+   escreval("Lista de mÃ¡quinas por ordem de prioridade:")
    para i de 1 ate total faca
       escreval(maquinas[i].nome, " - Prioridade: ", maquinas[i].prioridade:0:1)
    fimpara
 
 
-   escreval("Digite o nome da máquina para buscar a prioridade: ")
+   escreval("Digite o nome da mÃ¡quina para buscar a prioridade: ")
    leia(busca)
    encontrou <- falso
    para i de 1 ate total faca
@@ -72,7 +72,7 @@ total <- 5
    fimpara
 
    se nao encontrou entao
-      escreval("Máquina não encontrada.")
+      escreval("MÃ¡quina nÃ£o encontrada.")
    fimse
 
 
